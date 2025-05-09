@@ -1,0 +1,17 @@
+local g = game.PlaceId
+local examplelink = "https://raw.githubusercontent.com/HubUnzip/rbx/main/"
+local success, result = pcall(function()
+    loadstring(game:HttpGet(examplelink .. g))()
+end)
+
+if success then
+else
+game:GetService("StarterGui"):SetCore("SendNotification",{
+    Title = "Oops!";
+    Text = "Not a support game";
+    Duration = math.huge;
+    Button1 = "FUCK"
+})
+ 
+print("false")
+end
